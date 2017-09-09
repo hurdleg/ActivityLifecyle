@@ -29,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
         activityLifecyle = (TextView) findViewById( R.id.activityLifecyle );
 
         // Display the current lifecyle state to the user
-//        activityLifecyle.setText( "onCreate()" );
+        if (activityLifecyle.getText().length() == 0) {
+            activityLifecyle.setText( "onCreate()" );
+        } else {
+            activityLifecyle.setText( activityLifecyle.getText() + "\nonCreate() [again]" );
+        }
 
         // Display LogCat message
         Log.i( TAG, "onCreate()" );
@@ -44,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     public void onDestroy() {
         super.onDestroy();
 
-        //activityLifecyle.setText( "onDestroy()" );
+        activityLifecyle.setText( activityLifecyle.getText() + "\nonDestroy()" );
         Log.i( TAG, "onDestroy()" );
         Toast.makeText( getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT ).show();
     }
@@ -53,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     public void onPause() {
         super.onPause();
 
-        //activityLifecyle.setText( "onPause()" );
+        activityLifecyle.setText( activityLifecyle.getText() + "\nonPause()" );
         Log.i( TAG, "onPause()" );
         Toast.makeText( getApplicationContext(), "onPause()", Toast.LENGTH_SHORT ).show();
     }
@@ -62,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     public void onRestart() {
         super.onRestart();
 
-        //activityLifecyle.setText( "onRestart()" );
+        activityLifecyle.setText( activityLifecyle.getText() + "\nonRestart()" );
         Log.i( TAG, "onRestart()" );
         Toast.makeText( getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT ).show();
     }
@@ -71,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
 
-        //activityLifecyle.setText( "onResume()" );
+        activityLifecyle.setText( activityLifecyle.getText() + "\nonResume()" );
         Log.i( TAG, "onResume()" );
         Toast.makeText( getApplicationContext(), "onResume()", Toast.LENGTH_SHORT ).show();
     }
@@ -80,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
 
-        //activityLifecyle.setText( "onStart()" );
+        activityLifecyle.setText( activityLifecyle.getText() + "\nonStart()" );
         Log.i( TAG, "onStart()" );
         Toast.makeText( getApplicationContext(), "onStart()", Toast.LENGTH_SHORT ).show();
     }
@@ -89,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     public void onStop() {
         super.onStop();
 
-        //activityLifecyle.setText("onStop()");
+        activityLifecyle.setText( activityLifecyle.getText() + "\nonStop()" );
         Log.i( TAG, "onStop()" );
         Toast.makeText( getApplicationContext(), "onStop()", Toast.LENGTH_SHORT ).show();
     }

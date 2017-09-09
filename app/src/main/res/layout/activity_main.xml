@@ -11,4 +11,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/activityLifecyle"
         android:layout_centerInParent="true" />
+
 </RelativeLayout>
