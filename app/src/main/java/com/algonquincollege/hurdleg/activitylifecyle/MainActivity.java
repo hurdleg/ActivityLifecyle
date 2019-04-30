@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i( TAG, "onCreate()" );
 
         // Toast is a light-weight notification to the user.
-        Toast.makeText( getApplicationContext(), "onCreate()", Toast.LENGTH_SHORT ).show();
+        Toast.makeText( this, "onCreate()", Toast.LENGTH_SHORT ).show();
     }
 
     // Remaining lifecycle method overrides (in alphabetical order)
